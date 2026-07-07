@@ -25,7 +25,7 @@ export async function executeActions(businessId: string, actions: ActionItem[]):
         message: action.message,
         status: 'sent', // mocked
         triggered_by: 'ceo_ai'
-      });
+      } as any);
 
       if (error) {
         console.error("Failed to insert notification:", error);
