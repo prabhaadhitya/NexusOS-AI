@@ -84,11 +84,11 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: oklch(0.18 0.02 260); /* approx #0A0B0F */
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
+  --card: oklch(0.20 0.03 260); /* approx #12141C */
   --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
+  --popover: oklch(0.20 0.03 260);
   --popover-foreground: oklch(0.985 0 0);
   --primary: oklch(0.922 0 0);
   --primary-foreground: oklch(0.205 0 0);
@@ -126,5 +126,14 @@
   }
   html {
     @apply font-sans;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-violet-500 to-emerald-500;
+  }
+  .bg-gradient-accent {
+    @apply bg-gradient-to-r from-indigo-600 via-violet-600 to-emerald-500;
   }
 }
